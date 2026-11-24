@@ -1,0 +1,29 @@
+{
+  "records": [
+    {
+      "id": "BP-1",
+      "text": "施工期间不得占用北侧通道；消防验收后恢复原状。",
+      "kind": "permit-condition"
+    },
+    {
+      "id": "BP-2",
+      "text": "北侧通道仅在夜间吊装时封闭。",
+      "kind": "applicant-interpretation"
+    },
+    {
+      "id": "BP-3",
+      "text": "图纸 V4：北侧通道改作唯一材料出入口。",
+      "kind": "drawing-revision"
+    }
+  ],
+  "sites": [
+    {
+      "id": "LOT-6",
+      "aliases": [
+        "六号地",
+        "B6"
+      ]
+    }
+  ],
+  "case_id": "permit-1"
+}
