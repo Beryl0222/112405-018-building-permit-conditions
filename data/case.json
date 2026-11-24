@@ -1,29 +1,122 @@
 {
+  "case_id": "case-building-permit-conditions",
   "records": [
     {
-      "id": "BP-1",
-      "text": "施工期间不得占用北侧通道；消防验收后恢复原状。",
-      "kind": "permit-condition"
+      "id": "BP-P1",
+      "kind": "permit",
+      "text": "P1第2条：LOT6全过程保持消防道F-N畅通，不得堆料。第3条：A楼院内道AN仅可吊装警戒时封闭。"
     },
     {
-      "id": "BP-2",
-      "text": "北侧通道仅在夜间吊装时封闭。",
-      "kind": "applicant-interpretation"
+      "id": "BP-M1",
+      "kind": "map",
+      "text": "V3中AN与F-N不重合，材料从西门W进入，北侧城市路NR在地块外。"
     },
     {
-      "id": "BP-3",
-      "text": "图纸 V4：北侧通道改作唯一材料出入口。",
-      "kind": "drawing-revision"
-    }
-  ],
-  "sites": [
+      "id": "BP-M2",
+      "kind": "map",
+      "text": "V4西门永久关闭，AN与F-N在J段重合，A楼只能经J进料，B楼消防也经J。"
+    },
     {
-      "id": "LOT-6",
-      "aliases": [
-        "六号地",
-        "B6"
-      ]
+      "id": "BP-S1",
+      "kind": "schedule",
+      "text": "周二A楼20:00-22:00吊装封J，B楼21:00-22:00人员经F-N撤场；22点后J短时堆料。"
+    },
+    {
+      "id": "BP-N1",
+      "kind": "neighbor",
+      "text": "邻居建议白天可走北路，晚上别吵。"
+    },
+    {
+      "id": "BP-R1",
+      "kind": "regulator",
+      "text": "消防P2：周二20:00-21:00临时道T替代A楼的F-N，不覆盖B楼，21:00撤T，P1其他不变。"
+    },
+    {
+      "id": "BP-Q1",
+      "kind": "application",
+      "text": "施工方问：吊装提前半小时结束，是否所有作业都获准？"
+    },
+    {
+      "id": "BP-S2",
+      "kind": "schedule",
+      "text": "A楼改20:00-20:45吊装、不堆料；B楼仍21点撤场，其车辆20:30停J等待。"
+    },
+    {
+      "id": "BP-E1",
+      "kind": "execution",
+      "text": "周一A楼按V3经W进料，已签收。"
+    },
+    {
+      "id": "BP-P3",
+      "kind": "permit",
+      "text": "建设附注：夜间吊装先取得噪声许可，本文件未授予。"
+    },
+    {
+      "id": "BP-L1",
+      "kind": "license",
+      "text": "环境N1仅准A楼周二20:00-21:00吊装，不含B楼。"
     }
   ],
-  "case_id": "permit-1"
+  "objects": {
+    "spaces": [
+      {
+        "id": "AN",
+        "building": "A"
+      },
+      {
+        "id": "F-N",
+        "shared_by": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "J",
+        "overlap_of": [
+          "AN",
+          "F-N"
+        ],
+        "map": "V4"
+      },
+      {
+        "id": "T",
+        "alternative_for": [
+          "A"
+        ],
+        "source": "BP-R1"
+      },
+      {
+        "id": "NR",
+        "outside": "LOT6"
+      }
+    ],
+    "officials": [
+      {
+        "id": "fire",
+        "power": "消防条件"
+      },
+      {
+        "id": "environment",
+        "power": "噪声时段"
+      },
+      {
+        "id": "reviewer",
+        "power": "解释无修改权"
+      }
+    ]
+  },
+  "existing": [
+    {
+      "id": "PLAN1",
+      "state": "submitted",
+      "source": "BP-S1",
+      "map": "V4"
+    },
+    {
+      "id": "WORK0",
+      "state": "executed",
+      "source": "BP-E1",
+      "map": "V3"
+    }
+  ]
 }
